@@ -41,7 +41,6 @@ void loop()
     if (!client) { return; }
     while(!client.available()){  delay(1); }
     client.flush();
-    Serial.println("check....");
     client.println("HTTP/1.1 200 OK");
     client.println("Content-Type: text/html");
     client.println("");
